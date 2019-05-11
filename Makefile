@@ -12,7 +12,7 @@ SUBMITDIR = webserver-submit
 all: wserver wclient spin.cgi
 
 wserver: wserver.o request.o io_helper.o
-	$(CC) $(CFLAGS) -o wserver wserver.o request.o io_helper.o 
+	$(CC) $(CFLAGS) -o wserver wserver.o request.o io_helper.o -lpthread
 
 wclient: wclient.o io_helper.o
 	$(CC) $(CFLAGS) -o wclient wclient.o io_helper.o
